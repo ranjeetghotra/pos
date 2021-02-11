@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'watch-list',
     pathMatch: 'full'
+  },
+  {
+    path: 'watch-list',
+    loadChildren: () => import('./pages/watch-list/watch-list.module').then( m => m.WatchListPageModule)
   },
 ];
 
