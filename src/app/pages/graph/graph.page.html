@@ -1,0 +1,33 @@
+<ion-content style="--padding-top: 10px">
+  <span class="btn-close" routerLink="/watch-list"><ion-icon name="close"></ion-icon></span>
+  <ion-row class="company-wrap ion-align-items-end">
+    <ion-col size="auto" class="company-title">
+      AAPL
+    </ion-col>
+    <ion-col class="company-name">
+      Apple Inc.
+    </ion-col>
+  </ion-row>
+  <ion-row class="current-stock">
+    <ion-col size="auto">
+      <span class="stock-value">135.37</span><span class="stock-changed">+0.24</span>
+      <span class="stock-title">At Close</span>
+    </ion-col>
+    <ion-col size="auto" style="border-left: 1px solid #D3D3D3;">
+      <span class="stock-value">135.37</span><span class="stock-changed">+0.24</span>
+      <span class="stock-title">After Hours</span>
+    </ion-col>
+  </ion-row>
+  <div class="pills-range">
+    <span (click)="chartRange(1)" [class.active]="ChartDataRange === 1">1D</span>
+    <span (click)="chartRange(7)" [class.active]="ChartDataRange === 7">1W</span>
+    <span (click)="chartRange(30)" [class.active]="ChartDataRange === 30">1M</span>
+    <span (click)="chartRange(90)" [class.active]="ChartDataRange === 90">3M</span>
+    <span (click)="chartRange(180)" [class.active]="ChartDataRange === 180">6M</span>
+    <span (click)="chartRange(365)" [class.active]="ChartDataRange === 365">1Y</span>
+    <span (click)="chartRange(730)" [class.active]="ChartDataRange === 730">2Y</span>
+    <span (click)="chartRange(1825)" [class.active]="ChartDataRange === 1825">5Y</span>
+  </div>
+  <app-line-chart [chartData]="chartData"></app-line-chart>
+  <app-bar-chart [chartData]="chartData"></app-bar-chart>
+</ion-content>

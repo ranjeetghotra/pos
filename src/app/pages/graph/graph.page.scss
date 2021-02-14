@@ -1,0 +1,80 @@
+.btn-close {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  top: 5px;
+  right: 10px;
+  border-radius: 25px;
+  background-color: #dddddd;
+  position: absolute;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1;
+  outline: 0;
+  ion-icon {
+    color: #555555;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.company-wrap {
+  border-bottom: 2px solid #D3D3D3;
+  padding: 10px 0;
+  margin: 0 10px;
+  .company-title {
+    font-weight: bold;
+    color: #2d2d2d;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .company-name {
+    font-weight: bold;
+    margin-top: 4px;
+    color: #808080;
+  }
+}
+.current-stock {
+  padding: 8px 0;
+  ion-col {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .stock-value {
+    font-weight: bold;
+    color: #2d2d2d;
+    font-size: 20px;
+  }
+  .stock-changed {
+    color: #3BC75C;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  .stock-title {
+    display: block;
+    color: #808080;
+    font-size: 18px;
+  }
+}
+.pills-range {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
+  padding: 5px 0;
+  span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #2d2d2d;
+    &.active {
+      font-weight: bold;
+      background-color: #f0f0f0;
+    }
+  }
+}

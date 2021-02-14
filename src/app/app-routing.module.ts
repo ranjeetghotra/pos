@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'watch-list',
     loadChildren: () => import('./pages/watch-list/watch-list.module').then( m => m.WatchListPageModule)
   },
+  {
+    path: 'graph',
+    loadChildren: () => import('./pages/graph/graph.module').then( m => m.GraphPageModule)
+  },
+
 ];
 
 @NgModule({
